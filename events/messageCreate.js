@@ -1,4 +1,5 @@
-let Guild = require("../models/Guild")
+let Guild = require("../models/Guild");
+let User = require("../models/User");
 module.exports.run = async (client,message) => {
 
 const guild = await Guild.findOne({guildId:message.guild.id});
@@ -34,11 +35,17 @@ let command = client.commands.get(cmd)
 
 
 //finding command from aliases
-if (!command) command = client.commands.get(client.aliases, get(cmd))
+if (!command) command = client.commands.get(client.aliases.get(cmd))
 
 
 if (!command) return
 
+
+let user = await User.findOne({userId:message.author.id});
+if(!user)user = await User.create({userId:message.author.id});
+
+user.count++;
+await user.save();
 
 
 if (command) command.run(client, message, args)
