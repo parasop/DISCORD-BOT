@@ -1,3 +1,18 @@
 {
-    "prefix":">>"
+    "prefix":">>",
+    "emojis":{
+        "right":"<:emoji_16:763367280817471498>",
+        "wrong":"<:emoji_17:763367241327706118>",
+        "resume": "<:emoji_2:900445202899140648>",
+        "pause": "<:emoji_1:900445170103889980>",
+        "dev":"<:Verified_Developer:937701037203161149>",
+        "owner":"<:PartneredServer:937701271287234591>",
+        "suppoter": "<:Moderater:937701126051082290>",
+        "premium": "<:earth_booster:937711827356381185>",
+        "bug":"<:bug_hunter_badge:937712211709808700>"
+            },
+    "owner":["445531846118211588"],
+    "server":"https://dsc.gg/icx",
+    "color":"#FF0000"
+
 }
