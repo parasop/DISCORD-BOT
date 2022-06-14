@@ -4,7 +4,7 @@ module.exports.run = async (client,message) => {
 
 const guild = await Guild.findOne({guildId:message.guild.id});
 if(!guild){
-    Guild.create({guildId:message.guild.id})
+   guild = Guild.create({guildId:message.guild.id})
 }
 //CUSTOM PREFIX
     let prefix =  guild.prefix ||client.config.prefix
