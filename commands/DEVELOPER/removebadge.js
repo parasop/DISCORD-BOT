@@ -10,8 +10,7 @@ run: async (client, message, args) => {
 
         let member = message.mentions.members.first()|| message.guild.members.cache.get(args[0]);
 
-        let Member = await Data.findOne({ memberID: member.user.id });
-        if (!Member) { Data.create({ memberID: member.user.id }); }
+        let Member = await Data.findOne({ userID: member.user.id })|| new Data({ userID: member.user.id }); 
         
         if(!args[1]){
         
