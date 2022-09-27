@@ -49,7 +49,7 @@ run: async (client, message, args) => {
                     
                     }else if(args[1] ==="bug"){
         
-                        Member.badge.dev = true;
+                        Member.badge.bug = true;
                         await Member.save();
                         
                         return message.reply(`added bug hunter badge to that member`)
