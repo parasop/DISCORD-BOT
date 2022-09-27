@@ -6,8 +6,7 @@ module.exports = {
     run: async (client, message, args) => {
         let cache =[]
         let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])|| message.member;
-        let data = await User.findOne({userId:member.id});
-        if(!data) data = await User.create({userId:member.id});
+        let data = await User.findOne({userID:member.id})|| new User({userID:member.id});
         
 
 
