@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const User = mongoose.Schema({
-    userID: String,
+    userId: String,
     blacklisted: { type: Boolean, default: false },
     count: { type: Number, default: 0 },
     badge: {
